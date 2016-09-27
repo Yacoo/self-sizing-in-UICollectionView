@@ -7,6 +7,9 @@
 //
 
 #import "AppDelegate.h"
+#import "ViewController.h"
+#import "CollectionViewController.h"
+//#import "AutomaticViewController.h"
 
 @interface AppDelegate ()
 
@@ -17,6 +20,14 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+//    ViewController * controller = [ViewController new];
+    CollectionViewController * controller = [CollectionViewController new];
+    UIWindow * window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    self.window = window;
+    self.window.rootViewController = controller;
+    [self.window makeKeyWindow];
+    self.window.backgroundColor = [UIColor whiteColor];
+    
     return YES;
 }
 
